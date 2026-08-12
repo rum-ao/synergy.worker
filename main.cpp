@@ -4,13 +4,14 @@
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    std::list<Worker> workers;
+    std::list<Worker> workers; // Стандартный список List
     int count;
     int currentYear = 2026;
 
     std::cout << "Введите количество работников: ";
     std::cin >> count;
 
+    // 1. Ввод с клавиатуры данных класса
     for (int i = 0; i < count; ++i) {
         std::string name, pos;
         double sal;
@@ -26,6 +27,7 @@ int main() {
         workers.push_back(Worker(name, pos, sal, year));
     }
 
+    // 2. Вывод фамилий работников, чей стаж превышает введенное значение
     int minExperience;
     std::cout << "\nВведите минимальный стаж для поиска (в годах): ";
     std::cin >> minExperience;
@@ -39,6 +41,7 @@ int main() {
         }
     }
 
+    // 3. Если таких работников нет, вывести сообщение
     if (!found) {
         std::cout << "Работников с таким стажем не найдено.\n";
     }

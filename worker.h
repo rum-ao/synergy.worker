@@ -6,31 +6,31 @@
 
 class Worker {
 private:
-    std::string fullName;      // Фамилия и инициалы
-    std::string position;      // Название должности
-    double salary;             // Зарплата
-    int hireYear;              // Год поступления на работу
+    std::string fullName;      // фамилия и инициалы
+    std::string position;      // название должности
+    double salary;             // зарплата
+    int hireYear;              // год поступления на работу
 
 public:
-    // Конструктор по умолчанию
+    // конструктор по умолчанию
     Worker();
-    // Конструктор с параметрами
+    // конструктор с параметрами
     Worker(std::string name, std::string pos, double sal, int year);
-    // Деструктор
+    // деструктор
     ~Worker();
 
-    // Методы изменения полей
+    // методы изменения полей
     void setFullName(std::string name);
     void setPosition(std::string pos);
     void setSalary(double sal);
     void setHireYear(int year);
 
-    // Методы отображения и расчета
+    // методы отображения и расчета
     void display() const;
     int getExperience(int currentYear) const;
     
-    // Геттер для фамилии
+    // геттер для фамилии
     std::string getFullName() const;
 };
 
-#endif // WORKER_H
+#endif
